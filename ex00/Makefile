@@ -1,12 +1,12 @@
 CXX = c++
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = Account.cpp tests.cpp
+SRC = megaphone.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
-NAME = log
+NAME = megaphone
 
 all: $(NAME)
 

@@ -1,18 +1,18 @@
-CPP = c++
+CXX = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp main.cpp Contact.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
-NAME = megaphone
+NAME = phonebook
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CPP) -c $(SRC) $(FLAGS)
-	$(CPP) -o $(NAME) $^ $(FLAGS)
+	$(CXX) -c $(SRC) $(CXXFLAGS)
+	$(CXX) -o $(NAME) $^ $(CXXFLAGS)
 
 clean:
 	rm -f $(OBJ)

@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amblanch <amblanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 11:19:57 by amblanch          #+#    #+#             */
-/*   Updated: 2025/07/14 14:31:19 by amblanch         ###   ########.fr       */
+/*   Created: 2025/06/12 09:41:16 by amblanch          #+#    #+#             */
+/*   Updated: 2025/08/21 14:12:00 by amblanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class Contact
+#include <iostream>
+
+int main(int argc, char *argv[])
 {
-    public:
-        std::string name;
-        std::string last_name;
-        std::string nickname;
-        std::string phone_number;
-        std::string darkest_secret;
-};
+    if (argc < 2) {
+        std::cerr << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        return (1);
+    }
+    for (int i = 1; argv[i]; i++) {
+        for (int j = 0; argv[i][j]; j++)
+            std::cout << (char)toupper(argv[i][j]);
+    }
+    std::cout << std::endl;
+}

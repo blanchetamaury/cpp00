@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amblanch <amblanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaury <amaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 10:35:15 by amblanch          #+#    #+#             */
-/*   Updated: 2025/07/14 15:12:07 by amblanch         ###   ########.fr       */
+/*   Created: 2025/08/21 18:45:07 by amaury            #+#    #+#             */
+/*   Updated: 2025/08/21 18:46:55 by amaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <cstring>
-#include "contact.hpp"
+#include "PhoneBook.hpp"
 
-class Phonebook
-{
-    public:
-        Contact tab[8];
-        void add_phonebook(Contact contact);
-};
+int main (void) {
+    PhoneBook book;
+
+    book.loop();
+}
